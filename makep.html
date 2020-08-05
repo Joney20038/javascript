@@ -8,15 +8,13 @@
             var c = document.getElementById("canvas")
             if (c.getContext) {
                 var pen = c.getContext("2d")
-
-
-
-
+                //  declear and initialize 
+                var counterIn=0 , counterOut=0
                 for (var i = 1; i < 50000; i++) {
                     var x = Math.random()
                     var y = Math.random()
                     pen.fillRect(100 * x, 100 * y, 1, 1)
-                    alert(x)
+                    
                     if (x * x + y * y < 1 * 1) {
                         counterIn++
                         pen.fillStyle = "black"
