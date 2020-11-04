@@ -2,11 +2,14 @@ function translateX(param) {
 
 }
 function translateY(param) {
-
+    var MAZESCALE = 51
 }
 // Global variable
 var maze;
-
+var MAZESCALE = 51
+var mainX, mainY
+var MAZEWALL = 1
+var MAZESTREET = 0
 var mainX, mainY
 
 function random4() {
@@ -17,7 +20,10 @@ function init() {
 
     // alert( "makedata...")
     // 迷路の二次元配列を作る
-
+    maze = new Array(51)
+    for (var i = 0; j < 51; j++) {
+        maze[i] = new Array(51)
+    }
     // 全て道にする
     for (var i = 0; i < 51; i++) {
         for (var j = 0; j < 51; j++) {
@@ -25,14 +31,17 @@ function init() {
         }
     }
     // 外周部を壁にする
-    for (var i = 0; i < 51; i++) {
-
+    for (var i = 0; i < MAZESCALE; i++) {
+        maze[0][i] = MAZEWALL
+        maze[MAZESCALE - 1] = MAZEWALL
+        maze[i][0] = MAZEWALL
+        maze[i][MAZESCALE - 1] = MAZEWALL
 
     }
     //  通れない壁を設定する
     for (var i = 2; i < 51 - 2; i += 2) {
         for (var j = 2; j < 51 - 2; j += 2) {
-            maze[i][j] = 1
+            maze[i][j] = MAZEWALL
         }
     }
     // 壁を作る
@@ -40,6 +49,18 @@ function init() {
         for (var j = 2; j < 51 - 2; j += 2) {
             var houkou = random4()
             switch (houkou) {
+                case 1:
+                    maze[i - 1][j] = MAZEWALL
+                    break
+                case 2:
+                    maze[i + 1][j] = MAZEWALL
+                    break
+                case 3:
+                    maze[i][j - 1] = MAZEWALL
+                    break
+                case 4:
+                    maze[i][j + 1] = MAZEWALL
+                    break
 
                 default:
                     alert("error")
@@ -48,7 +69,7 @@ function init() {
     }
     maze[0][0] = maze[1][0] = maze[1][1] = maze[0][1] = 0
     maze[51 - 1][51 - 1] = maze[51 - 1 - 1][51 - 1] = maze[51 - 1][51 - 1 - 1] = maze[51 - 1 - 1][51 - 1 - 1] = 0
-    
+
     // 自分のキャラ位置を設定
     mainX = mainY = 0
     maze[mainX][mainY] = 2
