@@ -25,12 +25,6 @@ var ball_radius = 5
 // タイマーの制御用
 var timer = null
 
-function scoreup(p){
-    score+=p
-    var item=document.getElementById("textScore")
-    item.innerText=score
-}
-
 document.addEventListener('keydown', (event) => {
     var keyName = event.code
     switch (keyName) {
@@ -38,7 +32,6 @@ document.addEventListener('keydown', (event) => {
             clearRacket()
             pos_Racket_x += 5
             drawRacket()
-
             break
         case "ArrowLeft":
             clearRacket()
@@ -172,9 +165,8 @@ function checkWall() {
         balldx = balldx * (-1)
     }
     if (balldy > 0) {
-        if ((bally + ball_radius > pos_Racket_y) &&(ballx+ball_radius>pos_Racket_x)&&(ballx<pos_Racket_x+racket_w)){
-            balldy=balldy*(-1)   
-            scoreup(10)
+        if ((bally + ball_radius > pos_Racket_y) && (ballx + ball_radius > pos_Racket_x) && (ballx < pos_Racket_x + racket_w)) {
+            balldy = balldy * (-1)
         }
     }
     if (bally > screenH - WALL_THICKNESS * 2) {

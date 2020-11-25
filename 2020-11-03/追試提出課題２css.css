@@ -1,0 +1,98 @@
+header{
+    background-color: lightslategrey;
+    width: 960px;
+    margin: 0px auto;
+}
+.header{
+    display: flex;
+}
+header h1{
+    margin:0px;
+    height: 55px;
+}
+header p{
+    margin: -15px 0px 0px 30px;
+    font-size: 12px;
+}
+.search{
+    display:flex;
+    margin-left: 0px;
+}
+p#ingredients{
+    border: solid 1px;
+    height: 20px;
+    margin: 10px 0px 0px 430px;
+    padding: 5px 5px 0px 5px;
+    font-size: 10px;
+}
+p#button{
+    border: solid 1px;
+    height: 20px;
+    margin: 10px 0px 0px 5px;
+    padding: 5px 5px 0px 0px;
+    font-size: 10px;
+}
+nav ul{
+    display: flex;
+    margin-bottom: 0px;
+}
+nav ul li{
+    list-style: none;
+    font-size: 12px;
+    margin: 0px 48px;
+}
+h2{
+    background-color: lightslategrey;
+    border-radius: 13px;
+    color: lightsteelblue;
+    margin: 10px 0px 0px 10px;
+}
+nav img main img{
+    margin: 5px 5px -5px 15px;
+}
+/*コンテンツ*/
+.contents{
+    background-color: mediumpurple;
+}
+.wrapper{
+    width: 980px;
+    margin: 0 auto;
+}
+/*コンテンツ　セクション*/
+.contents section{
+    display: flex;
+}
+/*コンテンツ　セクション　ナビ*/
+.contents section nav{
+    width: 160px;
+    height: 650px;
+    background-color: mediumspringgreen;
+    margin-right: 10px;
+}
+.contents section nav ul{
+    display: block;
+    padding-left: 0px;
+}
+.contents section nav ul li{
+    list-style: none;
+    font-size: block;
+    margin: 0px 5px;
+}
+/*コンテンツ　メイン*/
+.contents section main{
+    width: 525px;
+    height: 550px;
+    background-color: navy;
+    margin: 0px 10px;
+}
+/*コンテンツ　アサイド*/
+.contents section aside{
+    width: 260px;
+    height: 650px;
+}
+section #title{
+    background-color: purple;
+    color: #000;
+     border-radius: 25px;
+     margin: 10px 5px;
+}

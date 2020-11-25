@@ -1,0 +1,20 @@
+body{
+    width: 750px;
+    margin: 0 auto;
+    border: solid honeydew 3px;
+}
+.contents{
+    margin: 30px;
+    border: solid honeydew 1px;
+}
+.contents dl{
+padding: 10px;
+}
+.contents p{
+    padding: 10px;
+}
+h1{
+    background-color: lightslategrey;
+    margin: 0px;
+    padding: 0px 10px;
+}
